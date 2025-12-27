@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.sendResponse = sendResponse;
+function sendResponse(options) {
+    if (options.type === 'Success') {
+        return Promise.resolve({
+            message: options.message ?? null,
+            data: options.data ?? null,
+            status: options.type,
+        });
+    }
+    // eslint-disable-next-line prefer-promise-reject-errors
+    return Promise.reject({
+        message: options.message ?? 'Failed',
+        data: options.data ?? null,
+        status: options.type,
+    });
+}

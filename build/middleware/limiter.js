@@ -8,9 +8,9 @@ const maxCount = ((0, is_1.isNotEmptyString)(MAX_REQUEST_PER_HOUR) && !isNaN(Num
     ? parseInt(MAX_REQUEST_PER_HOUR)
     : 0; // 0 means unlimited
 const limiter = (0, express_rate_limit_1.rateLimit)({
-    windowMs: 60 * 60 * 1000, // Maximum number of accesses within an hour
+    windowMs: 60 * 60 * 1000,
     max: maxCount,
-    statusCode: 200, // 200 means success，but the message is 'Too many request from this IP in 1 hour'
+    statusCode: 200,
     message: async (req, res) => {
         res.send({ status: 'Fail', message: 'Too many request from this IP in 1 hour', data: null });
     },

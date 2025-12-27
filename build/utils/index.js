@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sendResponse = sendResponse;
+exports.sendResponse = void 0;
 function sendResponse(options) {
     if (options.type === 'Success') {
         return Promise.resolve({
@@ -16,3 +16,4 @@ function sendResponse(options) {
         status: options.type,
     });
 }
+exports.sendResponse = sendResponse;

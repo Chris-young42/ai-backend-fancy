@@ -1,12 +1,10 @@
 {
-  "name": "chatgpt-web-service",
+  "name": "service",
   "version": "1.0.0",
   "private": false,
-  "description": "印客 chatGPT vue service 项目",
+  "description": "service",
   "author": "chenghuai",  
   "keywords": [
-    "encode",
-    "encode studio",
     "chatgpt-web",
     "chatgpt",
     "chatbot",
